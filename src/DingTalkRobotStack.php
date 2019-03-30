@@ -52,8 +52,7 @@ class DingTalkRobotStack
     {
         $query = \GuzzleHttp\Psr7\parse_query($request->getUri()->getQuery());
         $query['access_token'] = $this->access_token;
-        $body = $request->getBody()->getContents();
-        $request = \GuzzleHttp\Psr7\modify_request($request, ['body' => $body, 'query' => $query]);
+        $request = \GuzzleHttp\Psr7\modify_request($request, ['body' => $request->getBody()->getContents(), 'query' => http_build_query($query)]);
         return $request;
     }
 }

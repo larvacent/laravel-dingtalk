@@ -46,12 +46,15 @@ class DingTalkRobotManage
      */
     public $httpErrors = false;
 
+    /**
+     * @var string
+     */
     public $accessToken;
 
     /**
      * @var string
      */
-    protected $baseUri = 'https://restapi.amap.com';
+    protected $baseUri = 'https://oapi.dingtalk.com';
 
     /**
      * Create a new filesystem manager instance.
@@ -215,14 +218,12 @@ class DingTalkRobotManage
     }
 
     /**
-     * 发送文本消息
+     * 发送消息
      * @param array $request
-     * @param array $atMobiles
-     * @param bool $isAtAll
      * @return array
      */
     public function send($request)
     {
-        return $this->post('robot/send',$request);
+        return $this->postJSON('robot/send',$request);
     }
 }

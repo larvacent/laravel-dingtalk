@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * Class DingTalkRobot
+ * @mixin DingTalkRobotManage
  *
  * @author Tongle Xu <xutongle@gmail.com>
  */
