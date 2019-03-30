@@ -1,0 +1,34 @@
+{
+    "name": "larva/laravel-dingtalk-robot",
+    "description": "This is a Laravel expansion for the dingtalk.",
+    "keywords": [
+        "Larva",
+        "laravel",
+        "dingtalk"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^5.0",
+        "larva/supports": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larva\\DingTalk\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Larva\\DingTalk\\Robot\\DingTalkRobotServiceProvider"
+            ],
+            "aliases": {
+                "DingTalk": "Larva\\DingTalk\\Robot\\DingTalkRobot"
+            }
+        }
+    },
+    "prefer-stable": true
+}
